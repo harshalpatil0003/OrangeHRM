@@ -7,6 +7,7 @@ import java.io.IOException;
 import org.apache.poi.EncryptedDocumentException;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
+import org.testng.util.RetryAnalyzerCount;
 
 import com.crm.BaseClass.DashBoardBase;
 import com.crm.FileUtility.ReadFromExcelFile;
@@ -15,7 +16,7 @@ import com.crm.POM.PIM;
 
 public class PIMTest extends DashBoardBase {
 
-	@Test
+	@Test()
 	public void tc_001() throws EncryptedDocumentException, IOException {
 		PIM pim= new PIM(dr);
 		Dashboard board= new Dashboard(dr);
@@ -23,7 +24,7 @@ public class PIMTest extends DashBoardBase {
 		assertEquals(dr.getCurrentUrl(), ReadFromExcelFile.ReadExcel(3, 0, "url"), "TestCase fail, User Landed to wrong page");
 	}
 	
-	@Test
+	@Test(retryAnalyzer = com.crm.Listeners.NetworkExecute.class)
 	public void tc_002() throws EncryptedDocumentException, IOException {
 		PIM pim= new PIM(dr);
 		Dashboard board= new Dashboard(dr);

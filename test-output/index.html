@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\harsh\AppData\Local\Temp\testng-eclipse-577899156\testng-customsuite.xml</span>
+                    <span>C:\Users\harsh\AppData\Local\Temp\testng-eclipse-925726513\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +103,17 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="FunctionalTesting.PIMTest" class="method navigator-link" hash-for-method="tc_001">tc_001</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="FunctionalTesting.PIMTest" class="method navigator-link" hash-for-method="tc_002">tc_002</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="FunctionalTesting.PIMTest" class="method navigator-link" hash-for-method="tc_003">tc_003</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -126,9 +136,23 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="tc_001">
+                  </a> <!-- tc_001 -->
+                  <span class="method-name">tc_001</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="tc_002">
                   </a> <!-- tc_002 -->
                   <span class="method-name">tc_002</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="tc_003">
+                  </a> <!-- tc_003 -->
+                  <span class="method-name">tc_003</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -136,7 +160,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\harsh\AppData\Local\Temp\testng-eclipse-577899156\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\harsh\AppData\Local\Temp\testng-eclipse-925726513\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -145,11 +169,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;FunctionalTesting.PIMTest&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;tc_002&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- FunctionalTesting.PIMTest --&gt;
+      &lt;class name=&quot;FunctionalTesting.PIMTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -189,16 +209,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'tc_002')
 data.setCell(0, 2, 'FunctionalTesting.PIMTest')
-data.setCell(0, 3, 48218);
+data.setCell(0, 3, 49083);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'tc_001')
+data.setCell(1, 2, 'FunctionalTesting.PIMTest')
+data.setCell(1, 3, 6568);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'tc_003')
+data.setCell(2, 2, 'FunctionalTesting.PIMTest')
+data.setCell(2, 3, 5);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 48 seconds</span>
+              <span class="suite-total-time">Total running time: 55 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -226,16 +254,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">FunctionalTesting.PIMTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">tc_001</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -251,19 +272,43 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">Login</span>
-                <span class="method-start">5953 ms</span>
+                <span class="method-start">6311 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">tc_002</span>
-                <span class="method-start">6698 ms</span>
+                <span class="method-name">tc_001</span>
+                <span class="method-start">7747 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">Logout</span>
-                <span class="method-start">54929 ms</span>
+                <span class="method-start">14320 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Login</span>
+                <span class="method-start">16215 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">tc_002</span>
+                <span class="method-start">17216 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Logout</span>
+                <span class="method-start">66299 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Login</span>
+                <span class="method-start">67511 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">tc_003</span>
+                <span class="method-start">69586 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">Logout</span>
+                <span class="method-start">69593 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">postCondition</span>
-                <span class="method-start">56638 ms</span>
+                <span class="method-start">71716 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
