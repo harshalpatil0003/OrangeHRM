@@ -1,6 +1,8 @@
 package com.crm.BaseClass;
 import java.io.IOException;
-import com.crm.POM.Login;	
+import com.crm.POM.Login;
+
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -15,23 +17,14 @@ public class DashBoardBase extends MasterBase {
 	}
 @BeforeMethod
 	public void Login()  {
-		try {
-		Login login = new Login(dr);
-		login.getUsername().sendKeys(propertiesFile("username"));
-		login.getPassword().sendKeys(propertiesFile("password"));
-		login.getLogin_button().click();
-		}catch (IOException e) {
-			// TODO: handle exception
-		}
+		mLogin();
 	}
 @AfterMethod
-	public void logout() {
-		Dashboard dash= new Dashboard(dr);
-		dash.getUserdropdown_icon().click();
-		dash.getLogout().click();
-	}
+public void Logout() {
+	mLogout();
+}
 
-	@AfterMethod
+	@AfterClass
 	public void postCondition() {
 		mpostConditions();
 	}

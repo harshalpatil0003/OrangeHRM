@@ -1,4 +1,6 @@
 package com.crm.Listeners;
+import javax.naming.Context;
+
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -42,7 +44,8 @@ public class ExtentReportListeners extends ExtentReport implements ITestListener
 		Reporter.log("method started", true);
 		
 		//method to generate report
-		extentReport();
+		String module=context.getAllTestMethods()[0].getTestClass().getRealClass().getSimpleName();
+		extentReport(module);
 	}
 
 	@Override

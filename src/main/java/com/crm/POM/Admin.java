@@ -1,5 +1,5 @@
 package com.crm.POM;
-
+import java.util.List;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,24 +14,6 @@ public Admin(WebDriver dr) {
 	@FindBy(xpath = "(//ul)[3]//li[1]")
 	private WebElement userManagement;
 	
-	@FindBy(xpath ="(//ul)[3]//li[2]" )
-	private WebElement job;
-	
-	@FindBy(xpath ="(//ul)[3]//li[3]" )
-	private WebElement organizations;
-	
-	@FindBy(xpath ="(//ul)[3]//li[4]" )
-	private WebElement qualifications;
-	
-	@FindBy(xpath ="(//ul)[3]//li[5]" )
-	private WebElement notifications;
-	
-	@FindBy(xpath ="(//ul)[3]//li[6]" )
-	private WebElement corporateBrandings;
-	
-	@FindBy(xpath ="(//ul)[3]//li[7]" )
-	private WebElement more;
-	
 	@FindBy(xpath = "(//input[contains(@class,'oxd-input')])[2]")
 	private WebElement username;
 	
@@ -44,35 +26,76 @@ public Admin(WebDriver dr) {
 	@FindBy(xpath = "(//div[contains(text(),'-- Select --')])[2]")
 	private WebElement status;
 	
+	@FindBy(xpath = "//nav[@class=\"oxd-topbar-body-nav\"]/ul/li")
+	private List<WebElement> dropDowns;
+	
+	@FindBy(xpath = "//ul[contains(@class,'oxd-dropdown-menu')]/li")
+	private List<WebElement> option;
+	
+	@FindBy(xpath = "(//button[@class='oxd-icon-button'])[2]")
+	private WebElement toggle ;
+	
+	@FindBy(xpath = "//div[@class='oxd-form-row']")
+	private WebElement form;
+
+	@FindBy(xpath = "//div[@class='oxd-table-body']/div")
+	private List<WebElement> admins;
+	
+	@FindBy(xpath = "//button[contains(@class,'oxd-button--label-danger')]")
+	private WebElement delete;
+	
+	@FindBy(xpath = "//i[@class='oxd-icon bi-trash']")
+	private List<WebElement> trash;
 	
 
+	public WebElement getDelete() {
+		return delete;
+	}
+
+	public List<WebElement> getTrash() {
+		return trash;
+	}
+
+	public List<WebElement> getAdmins() {
+		return admins;
+	}
+
+	public WebElement getForm() {
+		return form;
+	}
+
+	public WebElement getToggle() {
+		return toggle;
+	}
+
+	public WebElement getUsername() {
+		return username;
+	}
+
+	public WebElement getUserrole() {
+		return userrole;
+	}
+
+	public WebElement getEmployeeName() {
+		return employeeName;
+	}
+
+	public WebElement getStatus() {
+		return status;
+	}
+
+	public List<WebElement> getDropDowns() {
+		return dropDowns;
+	}
 
 	public WebElement getUserManagement() {
 		return userManagement;
 	}
 
-	public WebElement getJob() {
-		return job;
+	public List<WebElement> getOption() {
+		return option;
 	}
 
-	public WebElement getOrganizations() {
-		return organizations;
-	}
-
-	public WebElement getQualifications() {
-		return qualifications;
-	}
-
-	public WebElement getNotifications() {
-		return notifications;
-	}
-
-	public WebElement getCorporateBrandings() {
-		return corporateBrandings;
-	}
-
-	public WebElement getMore() {
-		return more;
-	}
+	
 	
 }

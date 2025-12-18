@@ -10,9 +10,9 @@ public class ExtentReport {
 	public static ExtentReports report=null;
 	public static ExtentTest test=null;
 	
-	public static void extentReport() {
+	public static void extentReport(String module) {
 		//ExtentSparkReport Object
-		spark= new ExtentSparkReporter(".\\src\\test\\resources\\Report\\"+test+".html");
+		spark= new ExtentSparkReporter(".\\src\\test\\resources\\Report\\"+module+".html");
 		//config ExtentReport
 		spark.config().setDocumentTitle("Orange HRM");
 		spark.config().setReportName("Shashikant");

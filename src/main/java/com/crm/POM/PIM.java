@@ -1,5 +1,7 @@
 package com.crm.POM;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,27 +13,9 @@ public class PIM {
 	{
 		PageFactory.initElements(dr, this);
 	}
-
-	@FindBy(xpath = "(//label[@class='oxd-label'])[1]")
-	private WebElement emp_name;
 	
-	@FindBy(xpath = "(//label[@class='oxd-label'])[2]")
-	private WebElement emp_id;
-	
-	@FindBy(xpath = "(//label[@class='oxd-label'])[3]")
-	private WebElement emp_status;
-	
-	@FindBy(xpath = "(//label[@class='oxd-label'])[4]")
-	private WebElement include;
-	
-	@FindBy(xpath = "(//label[@class='oxd-label'])[5]")
-	private WebElement sup_name;
-	
-	@FindBy(xpath = "(//label[@class='oxd-label'])[6]")
-	private WebElement job_title;
-	
-	@FindBy(xpath = "(//label[@class='oxd-label'])[7]")
-	private WebElement sub_unit;
+	@FindBy(xpath = "(//label[@class='oxd-label'])")
+	private List<WebElement> form;
 
 	@FindBy(xpath = "//button[@type='submit']")
 	private WebElement search;
@@ -44,33 +28,25 @@ public class PIM {
 	
 	@FindBy(xpath = "(//a[contains(@class,'oxd-topbar-body-nav-tab-item')])[3]")
 	private WebElement roports;
+	
+	@FindBy(xpath = "//nav[@aria-label='Topbar Menu']/ul/li")
+	private List<WebElement> dropdowns;
+	
+	@FindBy(xpath = "//ul[@class='oxd-dropdown-menu']/li")
+	private List<WebElement> options;
 
-	public WebElement getEmp_name() {
-		return emp_name;
+	
+
+	public List<WebElement> getOptions() {
+		return options;
 	}
 
-	public WebElement getEmp_id() {
-		return emp_id;
+	public List<WebElement> getForm() {
+		return form;
 	}
 
-	public WebElement getEmp_status() {
-		return emp_status;
-	}
-
-	public WebElement getInclude() {
-		return include;
-	}
-
-	public WebElement getSup_name() {
-		return sup_name;
-	}
-
-	public WebElement getJob_title() {
-		return job_title;
-	}
-
-	public WebElement getSub_unit() {
-		return sub_unit;
+	public List<WebElement> getDropdowns() {
+		return dropdowns;
 	}
 
 	public WebElement getSearch() {

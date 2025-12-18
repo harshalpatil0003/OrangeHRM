@@ -1,9 +1,12 @@
 package com.crm.POM;
 
+import java.util.List;
+
 import javax.xml.xpath.XPath;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -42,6 +45,62 @@ public class Dashboard {
 	@FindBy(xpath = "//h6[contains(@class,'oxd-topbar-header-breadcrumb-module')]")
 	private WebElement header;
 	
+	@FindBy(xpath="//div[contains(@class,'oxd-grid-item oxd-grid-item--gutters orangehrm-dashboard-widget')]")
+	private List<WebElement> cards;
+	
+	@FindBy(xpath = "//button[contains(@class, 'orangehrm-upgrade-button')]")
+	private WebElement upgrade_btn;
+	
+	@FindBy(xpath = "//li[contains(@class,'oxd-userdropdown')]")
+	private WebElement userDropdown;
+	
+	@FindBy(xpath = "//span[contains(@class, 'oxd-main-menu-item--name') and text()='Admin'] ")
+	private WebElement Admin;
+	
+	@FindBy(xpath = "//span[contains(@class, 'oxd-main-menu-item--name') and text()='PIM'] ")
+	private WebElement PIM;
+	
+	@FindBy(xpath = "//span[contains(@class, 'oxd-main-menu-item--name') and text()='Leave'] ")
+	private WebElement Leave;
+	
+	@FindBy(xpath = "//span[contains(@class, 'oxd-main-menu-item--name') and text()='Time'] ")
+	private WebElement Time;
+	
+	@FindBy(xpath = "//span[contains(@class, 'oxd-main-menu-item--name') and text()='Recruitment'] ")
+	private WebElement Recruitment;
+	
+	public WebElement getAdmin() {
+		return Admin;
+	}
+
+	public WebElement getPIM() {
+		return PIM;
+	}
+
+	public WebElement getLeave() {
+		return Leave;
+	}
+
+	public WebElement getTime() {
+		return Time;
+	}
+
+	public WebElement getRecruitment() {
+		return Recruitment;
+	}
+
+	public WebElement getUserDropdown() {
+		return userDropdown;
+	}
+
+	public WebElement getUpgrade_btn() {
+		return upgrade_btn;
+	}
+
+	public List<WebElement> getCards() {
+		return cards;
+	}
+
 	public WebElement getHeader() {
 		return header;
 	}

@@ -9,6 +9,8 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 import com.crm.FileUtility.ReadProperty;
+import com.crm.POM.Dashboard;
+import com.crm.POM.Login;
 
 public class MasterBase extends ReadProperty{
 
@@ -47,4 +49,22 @@ public class MasterBase extends ReadProperty{
 	public static void mpostConditions() {
 		dr.quit();
 	}
+	
+	public static void mLogout() {
+		
+			Dashboard dash= new Dashboard(dr);
+			dash.getUserdropdown_icon().click();
+			dash.getLogout().click();
+	}
+	
+	public static void mLogin() {
+		try {
+			Login login = new Login(dr);
+			login.getUsername().sendKeys(propertiesFile("username"));
+			login.getPassword().sendKeys(propertiesFile("password"));
+			login.getLogin_button().click();
+			}catch (IOException e) {
+				// TODO: handle exception
+			}
+}
 }

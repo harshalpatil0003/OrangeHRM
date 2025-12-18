@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="FunctionalTesting.LoginTest">
+      <class name="FunctionalTesting.PIMTest">
         <methods>
-          <include name="preCondition"/>
-          <include name="Tc_004"/>
+          <include name="tc_002"/>
           <include name="postCondition"/>
+          <include name="Logout"/>
+          <include name="Login"/>
+          <include name="preCondition"/>
         </methods>
-      </class> <!-- FunctionalTesting.LoginTest -->
+      </class> <!-- FunctionalTesting.PIMTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
