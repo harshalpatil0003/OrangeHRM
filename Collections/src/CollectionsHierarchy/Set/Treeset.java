@@ -8,18 +8,17 @@ public class Treeset {
 
 	public static void main(String[] args) {
 			
-//		Comparator<FaceWash> cVol=(o1,o2)->o1.vol>o2.vol?1:o1.vol<o2.vol?-1:0 ;
-//		Comparator<FaceWash> cPrice=(o1,o2)->o1.price>o2.price?1:o1.price<o2.price?-1:0;
-//		Comparator<FaceWash> cColor=(o1,o2)->o1.color.compareTo(o2.color);
-//		Comparator<FaceWash> cBrand=(o1,o2)->o1.brand.compareTo(o2.brand);
-//		
-//		
-//		TreeSet<FaceWash> f= new TreeSet<FaceWash>();
-//		f.add(new FaceWash("Citaphil", 200, 100, "white"));
-//		f.add(new FaceWash("Natures", 100 ,120, "yellow"));
-//		f.add(new FaceWash("Garniar", 110, 200, "black"));
-//		f.add(new FaceWash("Citaphil", 200.0, 100, "white"));
-//		System.out.println(f);
+		Comparator<FaceWash> cVol=(o1,o2)->o1.vol>o2.vol?1:o1.vol<o2.vol?-1:0 ;
+		Comparator<FaceWash> cPrice=(o1,o2)->o1.price>o2.price?1:o1.price<o2.price?-1:0;
+		Comparator<FaceWash> cColor=(o1,o2)->o1.color.compareTo(o2.color);
+		Comparator<FaceWash> cBrand=(o1,o2)->o1.brand.compareTo(o2.brand);
+	
+		TreeSet<FaceWash> f= new TreeSet<FaceWash>(cBrand);
+		f.add(new FaceWash("Citaphil", 200, 100, "white"));
+		f.add(new FaceWash("Natures", 100 ,120, "yellow"));
+		f.add(new FaceWash("Garniar", 110, 200, "black"));
+		f.add(new FaceWash("Citaphil", 200.0, 100, "white"));
+		System.out.println(f);
 	
 // 		TreeSet<String > t= new TreeSet<String>();
 //		// Strings are Stored Lexicographically.
@@ -29,22 +28,22 @@ public class Treeset {
 // 		t.add("andrew");
 // 		System.out.println(t);
 		
-		TreeSet<Integer> b= new TreeSet<Integer>();	
-		b.add(23);
-		b.add(24);
-		b.add(3);
-		b.add(3);
-		b.add(2);
-		b.add(66);
-		b.add(96);
-		b.add(33);
-		b.add(32);
-		b.add(33);
-		
-		System.out.println(b);
-		System.out.println(b.reversed());
-		System.out.println(b.contains(66));
-		b.addLast(100);
+//		TreeSet<Integer> b= new TreeSet<Integer>();	
+//		b.add(23);
+//		b.add(24);
+//		b.add(3);
+//		b.add(3);
+//		b.add(2);
+//		b.add(66);
+//		b.add(96);
+//		b.add(33);
+//		b.add(32);
+//		b.add(33);
+//		
+//		System.out.println(b);
+//		System.out.println(b.reversed());
+//		System.out.println(b.contains(66));
+//	
 		
 		
 	}

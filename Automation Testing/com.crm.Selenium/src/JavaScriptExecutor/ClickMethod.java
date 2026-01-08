@@ -1,13 +1,9 @@
 package JavaScriptExecutor;
-
 import java.time.Duration;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-
 import UtilityClass.BaseClass;
-
 public class ClickMethod extends BaseClass{
 
 	public static void main(String[] args) throws InterruptedException {

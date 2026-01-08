@@ -11,7 +11,7 @@ import org.openqa.selenium.io.FileHandler;
 
 import UtilityClass.BaseClass;
 
-public class DunamicNames extends BaseClass{
+public class DynamicNames extends BaseClass{
 
 	public static void main(String[] args) throws InterruptedException, IOException {
 		

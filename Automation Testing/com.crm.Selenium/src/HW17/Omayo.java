@@ -14,11 +14,6 @@ import UtilityClass.BaseClass;
 public class Omayo extends BaseClass{
 
 	public static void main(String[] args) throws Exception {
-	
-//		WebDriver dr= new ChromeDriver();
-//		dr.manage().window().maximize();
-//		
-//		dr.get("https://omayo.blogspot.com/");
 		
 		preCondition("chrome", "https://omayo.blogspot.com/");
 		

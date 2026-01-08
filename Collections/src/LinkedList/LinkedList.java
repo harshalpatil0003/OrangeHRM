@@ -3,7 +3,6 @@ package LinkedList;
 public class LinkedList {
 	int size;
 	Node head;
-	
 	Node god;
 	Node ref;
 	public LinkedList() {
@@ -220,9 +219,5 @@ public class LinkedList {
 		}
 		return "[]";
 	}
-	
-	
-	
-	
 	
 }

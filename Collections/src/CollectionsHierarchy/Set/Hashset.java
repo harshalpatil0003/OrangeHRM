@@ -1,5 +1,4 @@
 package CollectionsHierarchy.Set;
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.TreeSet;
 public class Hashset {

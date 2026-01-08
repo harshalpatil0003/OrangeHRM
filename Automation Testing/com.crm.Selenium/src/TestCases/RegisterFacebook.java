@@ -16,6 +16,7 @@ public class RegisterFacebook extends BaseClass{
 
 	public static void main(String[] args) throws Exception {
 		
+		
 		String expected_URL="https://demowebshop.tricentis.com/";
 		String facebook="https://www.facebook.com/nopCommerce";
 		
